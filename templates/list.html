@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+   <header> <h1> Sunava </h1> </header>
+			<h2>1001627533</h2>
+   <body>
+
+   <center>
+      <header> <h1> This page lists the Student records </h1>
+      </header>
+      <br> <br>
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Vehicle</td>
+            <td>Grade</td>
+            <td>Room</td>
+            <td>Telnum</td>
+            <td>Picture</td>
+            <td>Keywords</td>
+         </thead>
+
+         {% for row in rows %}
+         <tr>
+            <td>{{row["name"]}}</td>
+            <td>{{row["vehicle"]}}</td>
+            <td> {{ row["grade"]}}</td>
+            <td> {{ row["room"]}}</td>
+            <td> {{ row["telnum"]}}</td>
+            <td> {{ row["picture"]}}</td>
+            <td>{{row['keywords']}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+
+      <br>
+      <h2> <a href = "/">Home</a> </h2>
+   </body>
+</html>
